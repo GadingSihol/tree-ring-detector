@@ -14,7 +14,7 @@ Aplikasi berbasis **Streamlit** dan **Computer Vision** untuk mendeteksi serta m
 ## 📦 Unduh Dataset Lengkap
 Karena ukuran dataset melebihi batas ukuran file repositori GitHub (100 MB), file dataset disimpan secara terpisah. Unduh dataset lengkap melalui tautan berikut:
 
-- **Google Drive:** [Download Dataset_Tree Rings.zip](https://drive.google.com/link-google-drive-kamu)
+- **Google Drive:** [Download Dataset_Tree Rings.zip](http://drive.google.com/drive/folders/1ImW1HAowRYFyEkHqa8R9DdDRrtXSG-IE)
 
 Setelah diunduh, letakkan file `Dataset_Tree Rings.zip` ke dalam folder `Streamlit/dataset/` (atau langsung unggah melalui menu **Upload Dataset (.ZIP)** di antarmuka aplikasi).
 
