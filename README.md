@@ -90,6 +90,6 @@ Browser akan otomatis terbuka di alamat `http://localhost:8501`.
 4. Bagikan tautan **Network URL** tersebut ke penguji untuk dibuka langsung di browser HP atau laptop mereka.
 
 ### Opsi 2: Deploy Gratis ke Streamlit Community Cloud (Akses Online dari Mana Saja)
-1. Buka [share.streamlit.io](https://share.streamlit.io) dan masuk menggunakan akun GitHub.
+1. Buka [share.streamlit.io](https://tree-ring-detector.streamlit.app/) dan masuk menggunakan akun GitHub.
 2. Klik **Create app** → pilih repositori `GadingSihol/tree-ring-detector` → isi **Main file path** dengan `app.py` → klik **Deploy**.
 3. Bagikan tautan aplikasi yang muncul (`https://nama-aplikasi.streamlit.app`) ke siapa saja untuk langsung dicoba tanpa perlu menginstal Python.
