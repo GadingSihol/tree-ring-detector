@@ -2,21 +2,26 @@
 
 Aplikasi berbasis **Streamlit** dan **Computer Vision** untuk mendeteksi serta menghitung jumlah lingkaran tahun (*tree rings*) pada penampang batang pohon guna mengestimasi usia pohon secara otomatis.
 
+🌐 **Live Demo:** [Buka Aplikasi Tree Ring Detector](https://tree-ring-detector.streamlit.app/)
+
+---
+
 ## ✨ Fitur Utama
 - **Pra-Pemrosesan Kontras Tinggi:** Menggabungkan kanal pencahayaan **CIELAB ($L^*$)** dan **Blue Channel**, *Bilateral Filtering* (reduksi *noise* serat kayu tanpa memburamkan garis), *CLAHE*, serta *Unsharp Masking*.
 - **Segmentasi Otomatis:** Menggunakan deteksi warna HSV untuk foto berlatar studio putih dan AI (`rembg` dengan model ringan `u2netp`) untuk foto berlatar alam/kompleks.
 - **Lokalisasi Pusat (*Pith*) & Pelacakan 360°:** Menggunakan *Distance Transform*, gradien *Sobel*, *Polar Remap*, serta *Wrapped Dynamic Programming* dengan estimasi kepadatan cincin adaptif.
-- **Dua Mode Input:** Unggah gambar satuan/banyak sekaligus (`.JPG`, `.JPEG`, `.PNG`) atau unggah dataset utuh berformat `.ZIP`.
+- **Dua Mode Input:** Unggah gambar satuan/banyak sekaligus (`.JPG`, `.JPEG`, `.PNG`) atau jalankan pengujian massal menggunakan dataset berformat `.ZIP`.
 - **Ekspor Hasil:** Unduh gambar hasil deteksi (`.PNG`) dan tabel rekapitulasi hasil (`.CSV`).
 
 ---
 
-## 📦 Unduh Dataset Lengkap
-Karena ukuran dataset melebihi batas ukuran file repositori GitHub (100 MB), file dataset disimpan secara terpisah. Unduh dataset lengkap melalui tautan berikut:
+## 📦 Sumber & Unduh Dataset
+Karena ukuran dataset melebihi batas ukuran file repositori GitHub (100 MB), file dataset disimpan secara terpisah. Anda dapat mengakses sumber dataset asli maupun mengunduh paket `.ZIP` siap pakai melalui tautan berikut:
 
-- **Google Drive:** [Download Dataset_Tree Rings.zip](http://drive.google.com/drive/folders/1ImW1HAowRYFyEkHqa8R9DdDRrtXSG-IE)
+- **Sumber Dataset Asli (Zenodo):** [Zenodo Record #15653340](https://zenodo.org/records/15653340)
+- **Dataset Proyek Siap Pakai (Google Drive):** [Download Dataset_Tree Rings.zip](http://drive.google.com/drive/folders/1ImW1HAowRYFyEkHqa8R9DdDRrtXSG-IE)
 
-Setelah diunduh, letakkan file `Dataset_Tree Rings.zip` ke dalam folder `Streamlit/dataset/` (atau langsung unggah melalui menu **Upload Dataset (.ZIP)** di antarmuka aplikasi).
+Setelah mengunduh `Dataset_Tree Rings.zip` dari Google Drive, letakkan file tersebut ke dalam folder `Streamlit/dataset/` untuk deteksi otomatis di mode lokal, atau unggah langsung melalui menu **Dataset Proyek (.ZIP)** di antarmuka aplikasi.
 
 ---
 
@@ -78,18 +83,6 @@ Browser akan otomatis terbuka di alamat `http://localhost:8501`.
 
 ---
 
-## 🌐 Cara Agar Orang Lain Bisa Ikut Mengetes di Perangkat Mereka
-
-### Opsi 1: Berbagi Lewat Satu Jaringan Wi-Fi / Hotspot (Tanpa Instalasi di HP/Laptop Penguji)
-1. Pastikan perangkat kamu dan perangkat penguji terhubung ke **jaringan Wi-Fi atau Hotspot yang sama**.
-2. Jalankan aplikasi di laptopmu dengan perintah:
-   ```bash
-   streamlit run app.py --server.address 0.0.0.0
-   ```
-3. Lihat alamat **Network URL** yang muncul di terminal (contoh: `http://192.168.1.15:8501`).
-4. Bagikan tautan **Network URL** tersebut ke penguji untuk dibuka langsung di browser HP atau laptop mereka.
-
-### Opsi 2: Deploy Gratis ke Streamlit Community Cloud (Akses Online dari Mana Saja)
-1. Buka [share.streamlit.io](https://share.streamlit.io) dan masuk menggunakan akun GitHub.
-2. Klik **Create app** → pilih repositori `GadingSihol/tree-ring-detector` → isi **Main file path** dengan `app.py` → klik **Deploy**.
-3. Bagikan tautan aplikasi yang muncul (`https://nama-aplikasi.streamlit.app`) ke siapa saja untuk langsung dicoba tanpa perlu menginstal Python.
+## 🌐 Cara Lain untuk Mengetes Aplikasi
+### Akses Online Langsung (Tanpa Instalasi)
+Buka tautan aplikasi yang sudah di-*deploy* di **[tree-ring-detector.streamlit.app](https://tree-ring-detector.streamlit.app/)** melalui browser HP atau laptop untuk langsung menguji deteksi lingkaran pohon secara online.
